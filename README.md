@@ -1,5 +1,5 @@
 # recursivefwl
-Data, code, and other materials for my thesis.
+Data, code, and other materials for [my thesis](https://scholarworks.uvm.edu/items/69a6f1a8-3db5-4e65-aa70-1a4071485636).
 
 1. [Python code](/recursivefwl.py)
 2. [Mathematica notebook for figure 1](/figure1.nb)
