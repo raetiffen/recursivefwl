@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[edges]{forest}
+\usepackage{adjustbox}
+\usepackage{amsmath}
+
+\begin{document}
+
+
+Two covariates:
+
+\begin{center}
+\begin{forest}
+    [{\(\text{earnings} = \underset{(5882.7)}{34040} \cdot \text{cons} + \underset{(130.65)}{812.31} \cdot \text{age}\)}
+        [{\(\text{cons} = \underset{(0.00016406)}{0.020964} \cdot \text{age}\)}]
+        [{\(\text{age} = \underset{(0.33261)}{42.501} \cdot \text{cons}\)}]
+    ]
+\end{forest}
+\end{center}
+
+Three covariates:
+
+\begin{adjustbox}{width=\linewidth}
+\begin{forest}
+    [{\(\text{earnings} = \underset{(11290)}{-98819} \cdot \text{cons} + \underset{(126.2)}{580.22} \cdot \text{age} + \underset{(705.6)}{9579} \cdot \text{educ}\)}
+        [{\(\text{cons} = \underset{(0.00023441)}{0.0039002} \cdot \text{age} + \underset{(0.00069737)}{0.054172} \cdot \text{educ}\)}
+            [{\(\text{age} = \underset{(0.023234)}{2.7878} \cdot \text{educ}\)}]
+            [{\(\text{educ} = \underset{(0.0026251)}{0.31499} \cdot \text{age}\)}]
+        ]
+        [{\(\text{age} = \underset{(1.8761)}{31.216} \cdot \text{cons} + \underset{(0.12396)}{0.7574} \cdot \text{educ}\)}
+            [{\(\text{cons} = \underset{(0.00025971)}{0.065045} \cdot \text{educ}\)}]
+            [{\(\text{educ} = \underset{(0.05949)}{14.899} \cdot \text{cons}\)}]
+        ]
+        [{\(\text{educ} = \underset{(0.17855)}{13.87} \cdot \text{cons} + \underset{(0.0039655)}{0.024229} \cdot \text{age}\)}
+            [{\(\text{cons} = \underset{(0.00016406)}{0.020964} \cdot \text{age}\)}]
+            [{\(\text{age} = \underset{(0.33261)}{42.501} \cdot \text{cons}\)}]
+        ]
+    ]
+\end{forest}
+\end{adjustbox}
+
+Four covariates:
+
+\begin{adjustbox}{width=\linewidth}
+\begin{forest}
+    for tree={grow'=0, draw, rounded corners}, forked edges,
+    [{\(\begin{aligned}\text{earnings} &= \underset{(11260)}{-94752} \cdot \text{cons} \\&\quad+ \underset{(132.45)}{376.4} \cdot \text{age} \\&\quad+ \underset{(706.71)}{9174.9} \cdot \text{educ} \\&\quad+ \underset{(3974.5)}{19138} \cdot \text{married}\end{aligned}\)}
+        [{\(\begin{aligned}\text{cons} &= \underset{(0.00024628)}{0.0041602} \cdot \text{age} \\&\quad+ \underset{(0.00069969)}{0.054426} \cdot \text{educ} \\&\quad- \underset{(0.0078785)}{0.026474} \cdot \text{married}\end{aligned}\)}
+            [{\(\begin{aligned}\text{age} &= \underset{(0.033446)}{2.4161} \cdot \text{educ} \\&\quad+ \underset{(0.67961)}{10.05} \cdot \text{married}\end{aligned}\)}
+                [{\(\begin{aligned}\text{educ} &= \underset{(0.29988)}{15.271} \cdot \text{married}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{married} &= \underset{(0.00072629)}{0.036986} \cdot \text{educ}\end{aligned}\)}]
+            ]
+            [{\(\begin{aligned}\text{educ} &= \underset{(0.0041437)}{0.29934} \cdot \text{age} \\&\quad+ \underset{(0.25049)}{1.2181} \cdot \text{married}\end{aligned}\)}
+                [{\(\begin{aligned}\text{age} &= \underset{(0.85197)}{46.948} \cdot \text{married}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{married} &= \underset{(0.00023314)}{0.012847} \cdot \text{age}\end{aligned}\)}]
+            ]
+            [{\(\begin{aligned}\text{married} &= \underset{(0.0006641)}{0.0098209} \cdot \text{age} \\&\quad+ \underset{(0.0019757)}{0.0096072} \cdot \text{educ}\end{aligned}\)}
+                [{\(\begin{aligned}\text{age} &= \underset{(0.023234)}{2.7878} \cdot \text{educ}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{educ} &= \underset{(0.0026251)}{0.31499} \cdot \text{age}\end{aligned}\)}]
+            ]
+        ]
+        [{\(\begin{aligned}\text{age} &= \underset{(1.7798)}{30.066} \cdot \text{cons} \\&\quad+ \underset{(0.11895)}{0.47755} \cdot \text{educ} \\&\quad+ \underset{(0.63643)}{9.5892} \cdot \text{married}\end{aligned}\)}
+            [{\(\begin{aligned}\text{cons} &= \underset{(0.00039343)}{0.064478} \cdot \text{educ} \\&\quad+ \underset{(0.0079943)}{0.015337} \cdot \text{married}\end{aligned}\)}
+                [{\(\begin{aligned}\text{educ} &= \underset{(0.29988)}{15.271} \cdot \text{married}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{married} &= \underset{(0.00072629)}{0.036986} \cdot \text{educ}\end{aligned}\)}]
+            ]
+            [{\(\begin{aligned}\text{educ} &= \underset{(0.088085)}{14.436} \cdot \text{cons} \\&\quad+ \underset{(0.11826)}{0.83546} \cdot \text{married}\end{aligned}\)}
+                [{\(\begin{aligned}\text{cons} &= \underset{(0.020042)}{1} \cdot \text{married}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{married} &= \underset{(0.011119)}{0.55478} \cdot \text{cons}\end{aligned}\)}]
+            ]
+            [{\(\begin{aligned}\text{married} &= \underset{(0.062523)}{0.11995} \cdot \text{cons} \\&\quad+ \underset{(0.0041311)}{0.029184} \cdot \text{educ}\end{aligned}\)}
+                [{\(\begin{aligned}\text{cons} &= \underset{(0.00025971)}{0.065045} \cdot \text{educ}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{educ} &= \underset{(0.05949)}{14.899} \cdot \text{cons}\end{aligned}\)}]
+            ]
+        ]
+        [{\(\begin{aligned}\text{educ} &= \underset{(0.17761)}{13.816} \cdot \text{cons} \\&\quad+ \underset{(0.0041782)}{0.016774} \cdot \text{age} \\&\quad+ \underset{(0.12499)}{0.66792} \cdot \text{married}\end{aligned}\)}
+            [{\(\begin{aligned}\text{cons} &= \underset{(0.00026008)}{0.020452} \cdot \text{age} \\&\quad+ \underset{(0.015722)}{0.039821} \cdot \text{married}\end{aligned}\)}
+                [{\(\begin{aligned}\text{age} &= \underset{(0.85197)}{46.948} \cdot \text{married}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{married} &= \underset{(0.00023314)}{0.012847} \cdot \text{age}\end{aligned}\)}]
+            ]
+            [{\(\begin{aligned}\text{age} &= \underset{(0.46999)}{36.96} \cdot \text{cons} \\&\quad+ \underset{(0.631)}{9.9882} \cdot \text{married}\end{aligned}\)}
+                [{\(\begin{aligned}\text{cons} &= \underset{(0.020042)}{1} \cdot \text{married}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{married} &= \underset{(0.011119)}{0.55478} \cdot \text{cons}\end{aligned}\)}]
+            ]
+            [{\(\begin{aligned}\text{married} &= \underset{(0.031749)}{0.080413} \cdot \text{cons} \\&\quad+ \underset{(0.00070511)}{0.011161} \cdot \text{age}\end{aligned}\)}
+                [{\(\begin{aligned}\text{cons} &= \underset{(0.00016406)}{0.020964} \cdot \text{age}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{age} &= \underset{(0.33261)}{42.501} \cdot \text{cons}\end{aligned}\)}]
+            ]
+        ]
+        [{\(\begin{aligned}\text{married} &= \underset{(0.063234)}{-0.21249} \cdot \text{cons} \\&\quad+ \underset{(0.00070681)}{0.01065} \cdot \text{age} \\&\quad+ \underset{(0.0039518)}{0.021118} \cdot \text{educ}\end{aligned}\)}
+            [{\(\begin{aligned}\text{cons} &= \underset{(0.00023441)}{0.0039002} \cdot \text{age} \\&\quad+ \underset{(0.00069737)}{0.054172} \cdot \text{educ}\end{aligned}\)}
+                [{\(\begin{aligned}\text{age} &= \underset{(0.023234)}{2.7878} \cdot \text{educ}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{educ} &= \underset{(0.0026251)}{0.31499} \cdot \text{age}\end{aligned}\)}]
+            ]
+            [{\(\begin{aligned}\text{age} &= \underset{(1.8761)}{31.216} \cdot \text{cons} \\&\quad+ \underset{(0.12396)}{0.7574} \cdot \text{educ}\end{aligned}\)}
+                [{\(\begin{aligned}\text{cons} &= \underset{(0.00025971)}{0.065045} \cdot \text{educ}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{educ} &= \underset{(0.05949)}{14.899} \cdot \text{cons}\end{aligned}\)}]
+            ]
+            [{\(\begin{aligned}\text{educ} &= \underset{(0.17855)}{13.87} \cdot \text{cons} \\&\quad+ \underset{(0.0039655)}{0.024229} \cdot \text{age}\end{aligned}\)}
+                [{\(\begin{aligned}\text{cons} &= \underset{(0.00016406)}{0.020964} \cdot \text{age}\end{aligned}\)}]
+                [{\(\begin{aligned}\text{age} &= \underset{(0.33261)}{42.501} \cdot \text{cons}\end{aligned}\)}]
+            ]
+        ]
+    ]
+\end{forest}
+\end{adjustbox}
+
+Five covariates after projecting out \texttt{married} and the constant:
+
+\begin{adjustbox}{width=\linewidth}
+\begin{forest}
+    [{\(\text{earnings} = \underset{(131.05)}{381.84} \cdot \text{age} + \underset{(704.85)}{9765.9} \cdot \text{educ} - \underset{(3705.4)}{24594} \cdot \text{female}\)}
+        [{\(\text{age} = \underset{(0.11995)}{0.47328} \cdot \text{educ} + \underset{(0.63304)}{0.17662} \cdot \text{female}\)}
+            [{\(\text{educ} = \underset{(0.11716)}{0.67218} \cdot \text{female}\)}]
+            [{\(\text{female} = \underset{(0.0042068)}{0.024135} \cdot \text{educ}\)}]
+        ]
+        [{\(\text{educ} = \underset{(0.0041464)}{0.01636} \cdot \text{age} + \underset{(0.11676)}{0.66409} \cdot \text{female}\)}
+            [{\(\text{age} = \underset{(0.63017)}{0.49475} \cdot \text{female}\)}]
+            [{\(\text{female} = \underset{(0.00079478)}{0.00062398} \cdot \text{age}\)}]
+        ]
+        [{\(\text{female} = \underset{(0.00079178)}{0.00022091} \cdot \text{age} + \underset{(0.0042247)}{0.024029} \cdot \text{educ}\)}
+            [{\(\text{age} = \underset{(0.11895)}{0.47755} \cdot \text{educ}\)}]
+            [{\(\text{educ} = \underset{(0.0041782)}{0.016774} \cdot \text{age}\)}]
+        ]
+    ]
+\end{forest}
+\end{adjustbox}
+
+Five covariates after projecting out \texttt{married}, \texttt{female}, and the constant:
+
+
+\begin{center}
+\begin{forest}
+    [{\(\text{earnings} = \underset{(131.05)}{381.84} \cdot \text{age} + \underset{(704.85)}{9765.9} \cdot \text{educ}\)}
+        [{\(\text{age} = \underset{(0.11995)}{0.47328} \cdot \text{educ}\)}]
+        [{\(\text{educ} = \underset{(0.0041464)}{0.01636} \cdot \text{age}\)}]
+    ]
+\end{forest}
+\end{center}
+
+\end{document}
